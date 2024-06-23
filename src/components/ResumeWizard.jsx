@@ -69,7 +69,8 @@ const useResumeData = () => {
       {
         schoolName: "Culinary Institute of Animalia",
         titleOfStudy: "Master of Culinary Arts",
-        dateOfStudy: "2010 - 2014",
+        dateFrom: "2010",
+        dateUntil: "2014",
       },
     ],
   });
