@@ -2,6 +2,7 @@ export default function Navigation({
   currentStep,
   stepsLength,
   setCurrentStep,
+  children,
 }) {
   function nextStep() {
     setCurrentStep((prev) => Math.min(prev + 1, stepsLength - 1));
@@ -15,6 +16,7 @@ export default function Navigation({
       <button onClick={prevStep} disabled={currentStep === 0}>
         &lt;
       </button>
+      {children}
       <button onClick={nextStep}>
         {currentStep < stepsLength - 2 ? `>` : `Submit`}
       </button>

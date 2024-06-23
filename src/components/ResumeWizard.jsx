@@ -7,6 +7,12 @@ import Navigation from "./utility/Navigation";
 import ControlPanel from "./utility/ControlPanel";
 
 const steps = [General, Experience, Education, Resume];
+const stepClasses = [
+  `general-wrapper`,
+  `experience-wrapper`,
+  `education-wrapper`,
+  `resume-wrapper`,
+];
 const stepsLength = steps.length;
 
 export default function ResumeWizard() {
@@ -14,10 +20,11 @@ export default function ResumeWizard() {
   const { resumeData, updateResumeData } = useResumeData();
 
   const Step = steps[currentStep];
-  const resumeComplete = currentStep === 3;
+  const currentStepClass = stepClasses[currentStep];
+  const resumeComplete = currentStep === stepsLength - 1;
 
   return (
-    <>
+    <div className={currentStepClass}>
       {resumeComplete ? (
         <>
           <Step resumeData={resumeData} />
@@ -29,15 +36,16 @@ export default function ResumeWizard() {
         </>
       ) : (
         <>
-          <Step resumeData={resumeData} updateResumeData={updateResumeData} />
           <Navigation
             currentStep={currentStep}
             stepsLength={stepsLength}
             setCurrentStep={setCurrentStep}
-          />
+          >
+            <Step resumeData={resumeData} updateResumeData={updateResumeData} />
+          </Navigation>
         </>
       )}
-    </>
+    </div>
   );
 }
 
