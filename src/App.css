@@ -1,5 +1,31 @@
+html {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body,
 #root {
-  max-width: 1280px;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: grid;
+  grid: min-content auto min-content / 1fr;
+}
+
+footer,
+header {
+  padding: 0.5rem 0;
+}
+
+header,
+footer,
+main {
   text-align: center;
+}
+
+footer img {
+  width: 32px;
   margin: 0 auto;
 }
