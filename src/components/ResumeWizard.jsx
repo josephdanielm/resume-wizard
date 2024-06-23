@@ -47,13 +47,6 @@ const useResumeData = () => {
     name: "Raccacoonie",
     email: "raccacoonie@example.com",
     phoneNumber: "123-456-7890",
-    education: [
-      {
-        schoolName: "Culinary Institute of Animalia",
-        titleOfStudy: "Master of Culinary Arts",
-        dateOfStudy: "2010 - 2014",
-      },
-    ],
     experience: [
       {
         companyName: "Le Gourmet Restaurant",
@@ -70,6 +63,13 @@ const useResumeData = () => {
           "Teaching culinary skills to students, developing curriculum, mentoring aspiring chefs",
         dateFrom: "2020",
         dateUntil: "Present",
+      },
+    ],
+    education: [
+      {
+        schoolName: "Culinary Institute of Animalia",
+        titleOfStudy: "Master of Culinary Arts",
+        dateOfStudy: "2010 - 2014",
       },
     ],
   });
