@@ -20,8 +20,12 @@ export default function ResumeWizard() {
     <>
       {resumeComplete ? (
         <>
-          <Step />
-          <ControlPanel />
+          <Step resumeData={resumeData} />
+          <ControlPanel
+            currentStep={currentStep}
+            stepsLength={stepsLength}
+            setCurrentStep={setCurrentStep}
+          />
         </>
       ) : (
         <>
@@ -40,8 +44,34 @@ export default function ResumeWizard() {
 // Resume Data
 const useResumeData = () => {
   const [resumeData, setResumeData] = useState({
-    name: "Joseph",
+    name: "Raccacoonie",
+    email: "raccacoonie@example.com",
     phoneNumber: "123-456-7890",
+    education: [
+      {
+        schoolName: "Culinary Institute of Animalia",
+        titleOfStudy: "Master of Culinary Arts",
+        dateOfStudy: "2010 - 2014",
+      },
+    ],
+    practicalExperience: [
+      {
+        companyName: "Le Gourmet Restaurant",
+        positionTitle: "Head Chef",
+        mainResponsibilities:
+          "Leading the kitchen team, creating new recipes, ensuring high-quality food preparation",
+        dateFrom: "2015",
+        dateUntil: "2019",
+      },
+      {
+        companyName: "Animal Kingdom Culinary School",
+        positionTitle: "Cooking Instructor",
+        mainResponsibilities:
+          "Teaching culinary skills to students, developing curriculum, mentoring aspiring chefs",
+        dateFrom: "2020",
+        dateUntil: "Present",
+      },
+    ],
   });
 
   const updateResumeData = (name, value) => {
