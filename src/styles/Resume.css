@@ -1,0 +1,49 @@
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  border: solid 1px black;
+}
+
+.general-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experience,
+.education {
+  margin-bottom: 20px;
+}
+
+.experience-entry,
+.education-entry {
+  margin-bottom: 10px;
+}
+
+h2,
+h3,
+h4 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 5px 0;
+}
+.experience-entry,
+.education-entry {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.resume {
+  overflow: auto;
+  padding: 20px;
+}
+
+@media print {
+  .resume {
+    page-break-after: always;
+  }
+}

@@ -12,12 +12,12 @@ export default function Navigation({
 
   return (
     <div className="navigation-wrapper">
-      {currentStep > 0 && <button onClick={prevStep}>&lt;</button>}
-      {currentStep < stepsLength - 1 ? (
-        <button onClick={nextStep}>&gt;</button>
-      ) : (
-        <button onClick={submitResume}>Submit</button>
-      )}
+      <button onClick={prevStep} disabled={currentStep === 0}>
+        &lt;
+      </button>
+      <button onClick={nextStep}>
+        {currentStep < stepsLength - 2 ? `>` : `Submit`}
+      </button>
     </div>
   );
 }
