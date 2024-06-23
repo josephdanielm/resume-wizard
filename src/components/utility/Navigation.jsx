@@ -16,7 +16,7 @@ export default function Navigation({
       {currentStep < stepsLength - 1 ? (
         <button onClick={nextStep}>&gt;</button>
       ) : (
-        <button onClick={submitForm}>Submit</button>
+        <button onClick={submitResume}>Submit</button>
       )}
     </div>
   );

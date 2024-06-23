@@ -1,12 +1,12 @@
 import { useState } from "react";
 import General from "./steps/General";
-import Practical from "./steps/Practical";
+import Experience from "./steps/Experience";
 import Education from "./steps/Education";
 import Resume from "./steps/Resume";
 import Navigation from "./utility/Navigation";
 import ControlPanel from "./utility/ControlPanel";
 
-const steps = [General, Practical, Education, Resume];
+const steps = [General, Experience, Education, Resume];
 const stepsLength = steps.length;
 
 export default function ResumeWizard() {
@@ -54,7 +54,7 @@ const useResumeData = () => {
         dateOfStudy: "2010 - 2014",
       },
     ],
-    practicalExperience: [
+    experience: [
       {
         companyName: "Le Gourmet Restaurant",
         positionTitle: "Head Chef",
