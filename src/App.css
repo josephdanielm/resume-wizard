@@ -49,12 +49,13 @@ main {
     rgba(3, 0, 10, 0) 100%
   );
   bottom: -60%;
-  filter: blur(300px);
+  filter: blur(200px);
+  z-index: -1;
 }
 
 body::before {
   content: "";
-  -webkit-filter: blur(300px);
+  -webkit-filter: blur(200px);
   background: linear-gradient(180deg, #2e35ff 0%, hsl(257, 69%, 39%) 100%);
   border-radius: 100%;
   filter: blur(200px);
@@ -64,11 +65,12 @@ body::before {
   top: 25%;
   position: absolute;
   width: 40%;
+  z-index: -1;
 }
 
 body::after {
   content: "";
-  -webkit-filter: blur(300px);
+  -webkit-filter: blur(200px);
   background: linear-gradient(180deg, #2e35ff 0%, hsl(257, 69%, 39%) 100%);
   border-radius: 100%;
   filter: blur(200px);
@@ -78,4 +80,5 @@ body::after {
   top: 5%;
   position: absolute;
   width: 40%;
+  z-index: -1;
 }

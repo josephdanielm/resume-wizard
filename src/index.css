@@ -3,18 +3,14 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: var(--color-text-light);
+  color: white;
   background: var(--color-bg-dark);
+  /* Toggle for dark */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Primary UI elements */
-  --color-primary: #6645eb; /* Electric Violet */
-  --color-secondary: #9a28e6; /* Deep Violet */
-  --color-tertiary: #1fc5db; /* Cerulean */
 
   /* Background colors */
   --color-bg-dark: #010214; /* Midnight Blue */

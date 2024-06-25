@@ -7,7 +7,11 @@ function App() {
   return (
     <>
       <header>
-        <h1>resume zen</h1>
+        <h1>
+          resume
+          <br />
+          zen
+        </h1>
       </header>
       <main>
         <ResumeWizard />
