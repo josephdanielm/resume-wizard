@@ -5,6 +5,7 @@ import Education from "./steps/Education";
 import Resume from "./steps/Resume";
 import Navigation from "./utility/Navigation";
 import ControlPanel from "./utility/ControlPanel";
+import "../styles/ResumeWizard.css";
 
 const steps = [General, Experience, Education, Resume];
 const stepClasses = [

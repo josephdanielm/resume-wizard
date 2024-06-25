@@ -1,16 +1,38 @@
 :root {
-  font-family: "Portrait", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: Avenir, system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color: #212121;
-  background: rgb(248, 248, 248);
+  color: var(--color-text-light);
+  background: var(--color-bg-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Primary UI elements */
+  --color-primary: #6645eb; /* Electric Violet */
+  --color-secondary: #9a28e6; /* Deep Violet */
+  --color-tertiary: #1fc5db; /* Cerulean */
+
+  /* Background colors */
+  --color-bg-dark: #010214; /* Midnight Blue */
+  --color-bg-deep: #151626; /* Space Cadet */
+  --color-bg-mid: #2b2a2f; /* Charcoal */
+
+  /* Subtle backgrounds */
+  --color-bg-subtle-dark: #3f3d48; /* Gunmetal Gray */
+  --color-bg-subtle-light: #585463; /* Cool Gray */
+
+  /* Text and foreground elements */
+  --color-text-light: #8d90a5; /* Light Slate Gray */
+  --color-text-muted: #babbc4; /* Gainsboro */
+
+  /* Light themes */
+  --color-light-1: #f2f3f4; /* Cultured */
+  --color-light-2: #f8f8f9; /* Snow */
+  --color-light-3: #ffffff; /* White */
 }
 
 *,
@@ -21,6 +43,10 @@
 
 * {
   margin: 0;
+}
+
+*:focus {
+  outline: none;
 }
 
 img,
@@ -62,23 +88,20 @@ body {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 3em;
   line-height: 1.1;
   font-style: italic;
-  font-family: "Barlow", serif;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
 .subtitle {
   font-size: 1.8em;
-  font-family: "Barlow", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 footer {
-  font-family: "Barlow", serif;
   font-size: 1.5em;
   font-weight: 600;
 }

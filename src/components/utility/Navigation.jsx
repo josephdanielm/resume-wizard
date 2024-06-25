@@ -1,3 +1,8 @@
+import arrowLeft from "../../assets/arrow-left.svg";
+import arrowRight from "../../assets/arrow-right.svg";
+import check from "../../assets/check.svg";
+import "../../styles/Navigation.css";
+
 export default function Navigation({
   currentStep,
   stepsLength,
@@ -12,14 +17,22 @@ export default function Navigation({
   }
 
   return (
-    <div className="navigation-wrapper">
-      <button onClick={prevStep} disabled={currentStep === 0}>
-        &lt;
+    <>
+      <button
+        className="nav-button"
+        onClick={prevStep}
+        disabled={currentStep === 0}
+      >
+        <img className="arrow-svg" src={arrowLeft} />
       </button>
       {children}
-      <button onClick={nextStep}>
-        {currentStep < stepsLength - 2 ? `>` : `Submit`}
+      <button className="nav-button" onClick={nextStep}>
+        {currentStep < stepsLength - 2 ? (
+          <img className="arrow-svg" src={arrowRight} />
+        ) : (
+          <img className="check-svg" src={check} />
+        )}
       </button>
-    </div>
+    </>
   );
 }

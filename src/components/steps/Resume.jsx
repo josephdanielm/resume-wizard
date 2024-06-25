@@ -3,14 +3,14 @@ import "../../styles/Resume.css";
 export default function Resume({ resumeData }) {
   return (
     <div className="resume">
-      <section className="general-info">
+      <section className="general-section">
         <h2>{resumeData.name}</h2>
         <p>{resumeData.email}</p>
         <p>{resumeData.phoneNumber}</p>
       </section>
 
       {resumeData.experience.length > 0 && (
-        <section className="experience">
+        <section className="experience-section">
           <h3>Experience</h3>
           {resumeData.experience.map((experienceEntry, index) => (
             <div key={index} className="experience-entry">
@@ -26,7 +26,7 @@ export default function Resume({ resumeData }) {
       )}
 
       {resumeData.education.length > 0 && (
-        <section className="education">
+        <section className="education-section">
           <h3>Education</h3>
           {resumeData.education.map((educationEntry, index) => (
             <div key={index} className="education-entry">
