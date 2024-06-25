@@ -1,3 +1,6 @@
+import "../../styles/Experience.css";
+import remove from "../../assets/remove.svg";
+
 export default function Experience({ resumeData, updateResumeData }) {
   function handleChange(event, index) {
     const { name, value } = event.target;
@@ -26,10 +29,26 @@ export default function Experience({ resumeData, updateResumeData }) {
     updateResumeData("experience", updatedExperience);
   }
 
+  function toggleOpen(event) {
+    event.currentTarget.closest(".job").classList.toggle("open");
+  }
+
   return (
     <div className="experience">
       {resumeData.experience.map((job, index) => (
-        <div key={index} className="job">
+        <div key={index} className="job open">
+          <span className="job-and-action-line">
+            {job.companyName}
+            <div className="action-buttons">
+              <button onClick={toggleOpen}>
+                <img className="open-svg" src={remove} />
+              </button>
+              <button onClick={() => removeExperience(index)}>
+                <img className="remove-svg" src={remove} />
+                <img className="remove-svg-mirror" src={remove} />
+              </button>
+            </div>
+          </span>
           <label>
             Company Name:
             <input
@@ -48,7 +67,7 @@ export default function Experience({ resumeData, updateResumeData }) {
               onChange={(event) => handleChange(event, index)}
             />
           </label>
-          <label>
+          <label className="main-responsibilities">
             Main Responsibilities:
             <input
               type="text"
@@ -75,7 +94,6 @@ export default function Experience({ resumeData, updateResumeData }) {
               onChange={(event) => handleChange(event, index)}
             />
           </label>
-          <button onClick={() => removeExperience(index)}>Remove</button>
         </div>
       ))}
       <button onClick={addExperience}>Add Experience</button>

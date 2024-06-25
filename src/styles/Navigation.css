@@ -1,25 +1,21 @@
 .nav-button {
-  background-color: var(--slate-600);
+  background-color: hsla(230, 70%, 50%, 0.6);
   border-radius: 4px;
   border: 0;
-  padding: 4px;
-  box-shadow: 0 10px 40px -12px rgba(16, 24, 40, 0.1);
+  padding: 6px;
+  box-shadow: 0 0 6px hsla(230, 70%, 10%, 0.95);
 }
 
-/* .nav-button:has(.check-svg) {
-  padding: 8px;
-} */
-
 .nav-button:hover {
-  background-color: var(--slate-700);
+  background-color: hsla(230, 70%, 45%, 0.6);
 }
 
 .nav-button:active {
-  background-color: var(--slate-800);
+  background-color: hsla(230, 70%, 40%, 0.6);
 }
 
 .nav-button:disabled {
-  background-color: var(--slate-100);
+  background-color: hsla(230, 70%, 20%, 0.6);
 }
 
 .nav-button:disabled .arrow-svg {

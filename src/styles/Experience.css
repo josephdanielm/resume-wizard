@@ -1,0 +1,89 @@
+.experience {
+  display: grid;
+  grid-template-rows: auto;
+  align-content: start;
+  width: 100%;
+  max-height: 60vh;
+  padding: 1rem;
+  row-gap: 1rem;
+  overflow-y: scroll;
+}
+
+.job {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--color-bg-deep);
+}
+
+.job-and-action-line {
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job label {
+  width: 49%;
+}
+
+.job button {
+  align-self: center;
+  background: none;
+  outline: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.remove-svg {
+  transition-delay: 50ms;
+  transform: rotate(45deg);
+}
+
+.remove-svg-mirror {
+  position: absolute;
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.job button:hover .remove-svg {
+  transform: rotate(-135deg);
+}
+
+.job button:hover .remove-svg-mirror {
+  transform: rotate(315deg);
+}
+
+.remove-svg,
+.remove-svg-mirror {
+  width: 24px;
+  transition: all 250ms ease-in-out;
+}
+
+label.main-responsibilities {
+  width: 100%;
+}
+
+@media (max-width: 777px) {
+  .job label {
+    width: 100%;
+  }
+}
+
+div.job {
+  height: 55px;
+  overflow: hidden;
+  transition: all 1s ease-out;
+}
+
+div.job.open {
+  height: unset;
+  overflow: visible;
+}

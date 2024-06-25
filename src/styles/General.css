@@ -41,6 +41,7 @@
 
 .tips {
   background-color: var(--color-bg-deep);
+  box-shadow: 0 0 2px hsla(230, 70%, 10%, 0.95);
   color: hsl(233, 12%, 85%);
   padding: 1.5rem 1rem;
   font-size: 15px;
