@@ -79,10 +79,8 @@ const useResumeData = () => {
 
   const updateResumeData = (name, value) => {
     if (typeof name === "object") {
-      // If 'name' is an object, set the entire resume data to this new object
       setResumeData(name);
     } else {
-      // Otherwise, update the specific field as before
       setResumeData((prev) => ({
         ...prev,
         [name]: value,

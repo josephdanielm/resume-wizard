@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import "./App.css";
-import resumeZenLogo from "./assets/zen-logo.png";
+import wizardLogo from "./assets/wizard-logo.png";
 import ResumeWizard from "./components/ResumeWizard";
 import githubLogo from "./assets/github-mark.png";
 
@@ -8,8 +8,9 @@ function App() {
   return (
     <>
       <header>
-        <img src={resumeZenLogo} />
-        <h1>Resume Zen</h1>
+        <h1>Resume</h1>
+        <img src={wizardLogo} />
+        <h1>Wizard</h1>
       </header>
       <main>
         <ResumeWizard />
