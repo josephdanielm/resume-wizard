@@ -50,45 +50,44 @@ export default function ResumeWizard() {
   );
 }
 
+const resumeDataObject = {
+  name: "",
+  email: "",
+  phoneNumber: "",
+  experience: [
+    {
+      companyName: "",
+      positionTitle: "",
+      mainResponsibilities: "",
+      dateFrom: "",
+      dateUntil: "",
+    },
+  ],
+  education: [
+    {
+      schoolName: "",
+      titleOfStudy: "",
+      dateFrom: "",
+      dateUntil: "",
+    },
+  ],
+};
+
 // Resume Data
 const useResumeData = () => {
-  const [resumeData, setResumeData] = useState({
-    name: "Raccacoonie",
-    email: "raccacoonie@example.com",
-    phoneNumber: "123-456-7890",
-    experience: [
-      {
-        companyName: "Le Gourmet Restaurant",
-        positionTitle: "Head Chef",
-        mainResponsibilities:
-          "Leading the kitchen team, creating new recipes, ensuring high-quality food preparation",
-        dateFrom: "2015",
-        dateUntil: "2019",
-      },
-      {
-        companyName: "Animal Kingdom Culinary School",
-        positionTitle: "Cooking Instructor",
-        mainResponsibilities:
-          "Teaching culinary skills to students, developing curriculum, mentoring aspiring chefs",
-        dateFrom: "2020",
-        dateUntil: "Present",
-      },
-    ],
-    education: [
-      {
-        schoolName: "Culinary Institute of Animalia",
-        titleOfStudy: "Master of Culinary Arts",
-        dateFrom: "2010",
-        dateUntil: "2014",
-      },
-    ],
-  });
+  const [resumeData, setResumeData] = useState(resumeDataObject);
 
   const updateResumeData = (name, value) => {
-    setResumeData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    if (typeof name === "object") {
+      // If 'name' is an object, set the entire resume data to this new object
+      setResumeData(name);
+    } else {
+      // Otherwise, update the specific field as before
+      setResumeData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   return {

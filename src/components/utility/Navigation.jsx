@@ -19,14 +19,14 @@ export default function Navigation({
   return (
     <>
       <button
-        className="nav-button"
+        className="nav-button left-button"
         onClick={prevStep}
         disabled={currentStep === 0}
       >
         <img className="arrow-svg" src={arrowLeft} />
       </button>
       {children}
-      <button className="nav-button" onClick={nextStep}>
+      <button className="nav-button right-button" onClick={nextStep}>
         {currentStep < stepsLength - 2 ? (
           <img className="arrow-svg" src={arrowRight} />
         ) : (

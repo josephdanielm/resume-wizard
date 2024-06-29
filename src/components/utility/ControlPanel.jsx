@@ -1,3 +1,5 @@
+import "../../styles/ControlPanel.css";
+
 export default function ControlPanel({
   currentStep,
   stepsLength,

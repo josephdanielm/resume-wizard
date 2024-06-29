@@ -1,68 +1,68 @@
 .general {
-  padding: 1rem;
+  padding: clamp(1.5rem, -0.24593rem + 3.123vw, 3rem)
+    clamp(1rem, -0.24593rem + 5.246vw, 5rem);
   display: flex;
-  flex-wrap: wrap;
   row-gap: 1.5rem;
-}
-
-.general label {
-  width: 80%;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 50%;
-  row-gap: 1rem;
-  align-items: center;
-  justify-content: space-evenly;
-  max-width: 50%;
+  width: 100%;
+  max-width: 1280px;
 }
 
 .knowledge-section {
   flex: 1 0 50%;
-  max-width: 50%;
 }
 
-@media (max-width: 777px) {
-  .inputs,
-  .knowledge-section {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-  .general {
-    padding: 1.25rem;
-  }
-  ul.tips {
-    row-gap: 0.75rem;
-    font-size: 14px;
-  }
+.general .input-field-group {
+  width: 100%;
+}
+
+.general .inputs {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+  row-gap: 1rem;
+  justify-content: space-evenly;
+  max-width: 60%;
 }
 
 .tips {
-  background-color: var(--color-bg-deep);
-  box-shadow: 0 0 2px hsla(230, 70%, 10%, 0.95);
-  color: hsl(233, 12%, 85%);
-  padding: 1.5rem 1rem;
-  font-size: 15px;
-  display: grid;
-  grid-template-rows: min-content auto auto auto;
-  justify-items: center;
+  background-color: var(--indigo-100);
+  border: solid 1px var(--zinc-300);
+  color: var(--zinc-600);
+  padding: clamp(1rem, 2vw + 1rem, 3rem) clamp(1rem, 2vw + 0.5rem, 2rem);
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
   height: 100%;
-  align-items: center;
+  row-gap: clamp(0.5rem, 0.5vw + 0.5rem, 1.25rem);
 }
 
 .tip {
-  width: 90%;
+  display: block;
+  width: 100%;
   font-weight: 500;
-  margin-left: 2rem;
+  margin-left: 0rem;
+  font-size: clamp(0.875rem, 1.25vw + 0.25rem, 1.25rem);
 }
 
 .tips-title {
-  font-weight: 900;
-  font-size: 1.2rem;
-  text-align: center;
-
+  font-weight: 800;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
   line-height: 100%;
+  color: var(--indigo-800);
+}
+
+@media (max-width: 777px) {
+  div.general-wrapper {
+    gap: 0.75rem;
+  }
+
+  div.general {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .general .inputs {
+    max-width: 100%;
+    flex: 0;
+  }
 }

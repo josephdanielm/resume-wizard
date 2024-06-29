@@ -1,3 +1,7 @@
+import "../../styles/Education.css";
+import remove from "../../assets/remove.svg";
+import add from "../../assets/add.svg";
+
 export default function Education({ resumeData, updateResumeData }) {
   function handleChange(event, index) {
     const { name, value } = event.target;
@@ -27,46 +31,61 @@ export default function Education({ resumeData, updateResumeData }) {
     <div className="education">
       {resumeData.education.map((educationEntry, index) => (
         <div key={index} className="education-entry">
-          <label>
-            School Name:
+          <span className="education-and-action-line">
+            {educationEntry.schoolName}
+            <button onClick={() => removeEducation(index)}>
+              <img className="remove-svg" src={remove} />
+            </button>
+          </span>
+          <div className="input-field-group">
             <input
+              id={"schoolName" + index}
               type="text"
               name="schoolName"
+              placeholder=" "
               value={educationEntry.schoolName}
               onChange={(event) => handleChange(event, index)}
             />
-          </label>
-          <label>
-            Title of Study:
+            <label htmlFor={"schoolName" + index}>School Name</label>
+          </div>
+          <div className="input-field-group">
             <input
+              id={"titleOfStudy" + index}
               type="text"
               name="titleOfStudy"
+              placeholder=" "
               value={educationEntry.titleOfStudy}
               onChange={(event) => handleChange(event, index)}
             />
-          </label>
-          <label>
-            Date From:
+            <label htmlFor={"titleOfStudy" + index}>Title of Study</label>
+          </div>
+          <div className="input-field-group">
             <input
+              id={"dateFrom" + index}
               type="text"
               name="dateFrom"
+              placeholder=" "
               value={educationEntry.dateFrom}
               onChange={(event) => handleChange(event, index)}
             />
-          </label>
-          <label>
-            Date Until:
+            <label htmlFor={"dateFrom" + index}>Date From</label>
+          </div>
+          <div className="input-field-group">
             <input
+              id={"dateUntil" + index}
               type="text"
               name="dateUntil"
+              placeholder=" "
               value={educationEntry.dateUntil}
               onChange={(event) => handleChange(event, index)}
             />
-          </label>
-          <button onClick={() => removeEducation(index)}>Remove</button>
+            <label htmlFor={"dateUntil" + index}>Date Until</label>
+          </div>
         </div>
       ))}
-      <button onClick={addEducation}>Add Education</button>
+      <button className="add-education" onClick={addEducation}>
+        <img className="add-svg" src={add} />
+      </button>
     </div>
   );
 }

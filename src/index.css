@@ -3,32 +3,37 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: white;
-  background: var(--color-bg-dark);
-  /* Toggle for dark */
+  color: var(--zinc-700);
+  background: var(--zinc-100);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  /* Background colors */
-  --color-bg-dark: #010214; /* Midnight Blue */
-  --color-bg-deep: #151626; /* Space Cadet */
-  --color-bg-mid: #2b2a2f; /* Charcoal */
-
-  /* Subtle backgrounds */
-  --color-bg-subtle-dark: #3f3d48; /* Gunmetal Gray */
-  --color-bg-subtle-light: #585463; /* Cool Gray */
-
-  /* Text and foreground elements */
-  --color-text-light: #8d90a5; /* Light Slate Gray */
-  --color-text-muted: #babbc4; /* Gainsboro */
-
-  /* Light themes */
-  --color-light-1: #f2f3f4; /* Cultured */
-  --color-light-2: #f8f8f9; /* Snow */
-  --color-light-3: #ffffff; /* White */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+  --indigo-950: #1e1b4b;
 }
 
 *,
@@ -61,6 +66,15 @@ select {
   font: inherit;
 }
 
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 p,
 h1,
 h2,
@@ -73,31 +87,4 @@ h6 {
 
 #root {
   isolation: isolate;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3em;
-  line-height: 1.1;
-  font-style: italic;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.subtitle {
-  font-size: 1.8em;
-  font-weight: 500;
-  font-style: normal;
-}
-
-footer {
-  font-size: 1.5em;
-  font-weight: 600;
 }

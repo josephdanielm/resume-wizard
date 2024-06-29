@@ -13,7 +13,7 @@ export default function Resume({ resumeData }) {
         <section className="experience-section">
           <h3>Experience</h3>
           {resumeData.experience.map((experienceEntry, index) => (
-            <div key={index} className="experience-entry">
+            <div key={index} className="experience-section-entry">
               <h4>{experienceEntry.companyName}</h4>
               <p>{experienceEntry.positionTitle}</p>
               <p>{experienceEntry.mainResponsibilities}</p>
@@ -29,7 +29,7 @@ export default function Resume({ resumeData }) {
         <section className="education-section">
           <h3>Education</h3>
           {resumeData.education.map((educationEntry, index) => (
-            <div key={index} className="education-entry">
+            <div key={index} className="education-section-entry">
               <h4>{educationEntry.schoolName}</h4>
               <p>{educationEntry.titleOfStudy}</p>
               <p>

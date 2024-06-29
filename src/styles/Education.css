@@ -1,4 +1,4 @@
-.experience {
+.education {
   padding: clamp(1.5rem, -0.24593rem + 3.123vw, 3rem)
     clamp(1rem, -0.24593rem + 5.246vw, 5rem);
   width: 100%;
@@ -9,16 +9,16 @@
   row-gap: 1rem;
 }
 
-.job .input-field-group input {
+.education-entry .input-field-group input {
   width: 100%;
 }
 
-.job .input-field-group {
+.education-entry .input-field-group {
   margin-bottom: 1rem;
   flex: 0 0 48%;
 }
 
-.job {
+.education-entry {
   display: grid;
   grid: repeat(3, auto) / 1fr 1fr;
   gap: 1rem;
@@ -27,15 +27,13 @@
   background: var(--indigo-100);
 }
 
-.job span {
+.education-entry div:nth-of-type(1),
+.education-entry div:nth-of-type(2) {
   grid-column: span 2;
 }
 
-.job div:nth-of-type(3) {
+.education-and-action-line {
   grid-column: span 2;
-}
-
-.job-and-action-line {
   display: flex;
   width: 100%;
   height: 2rem;
@@ -45,7 +43,7 @@
   margin-bottom: 1rem;
 }
 
-button.add-experience {
+button.add-education {
   width: 30%;
   display: flex;
   justify-content: center;
@@ -58,15 +56,15 @@ button.add-experience {
   justify-self: center;
 }
 
-.job-and-action-line button {
+.education-and-action-line button {
   margin: 0 0 0 auto;
 }
 
-.job label {
+.education-entry label {
   width: 100%;
 }
 
-.job button {
+.education-entry button {
   align-self: center;
   background: none;
   outline: none;
@@ -81,26 +79,22 @@ button.add-experience {
   width: 24px;
 }
 
-label.main-responsibilities {
-  width: 100%;
-}
-
 @media (max-width: 500px) {
-  .job {
+  .education-entry {
     display: flex;
     flex-direction: column;
   }
 
-  .job .input-field-group {
+  .education-entry .input-field-group {
     flex: 1;
     width: 100%;
   }
 
-  div.experience-wrapper {
+  div.education-wrapper {
     gap: 0.75rem;
   }
 
-  .experience .input {
+  .education .input {
     width: 100%;
     flex: 0;
   }
