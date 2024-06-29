@@ -51,6 +51,19 @@
   color: var(--indigo-800);
 }
 
+.hint-animation {
+  animation: hint 1s infinite alternate;
+}
+
+@keyframes hint {
+  from {
+    color: black;
+  }
+  to {
+    color: blueviolet;
+  }
+}
+
 @media (max-width: 777px) {
   div.general-wrapper {
     gap: 0.75rem;

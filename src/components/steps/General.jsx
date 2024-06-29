@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import "../../styles/General.css";
 
 export default function General({ resumeData, updateResumeData }) {
@@ -6,6 +7,16 @@ export default function General({ resumeData, updateResumeData }) {
     const { name, value } = event.target;
     updateResumeData(name, value);
   }
+
+  const [showHint, setShowHint] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowHint((prev) => !prev);
+    }, 15000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   function fillWithEasterEggData() {
     updateResumeData(easterEggData);
@@ -51,7 +62,10 @@ export default function General({ resumeData, updateResumeData }) {
 
       <div className="knowledge-section">
         <ul className="tips">
-          <span className="tips-title" onClick={() => fillWithEasterEggData()}>
+          <span
+            className={`tips-title ${showHint ? "hint-animation" : ""}`}
+            onClick={() => fillWithEasterEggData()}
+          >
             Tips
           </span>
           <li className="tip">
