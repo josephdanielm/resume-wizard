@@ -43,8 +43,7 @@
   margin-bottom: 0.25rem;
 }
 
-button.add-education {
-  width: 30%;
+.add-education {
   display: flex;
   justify-content: center;
   background-color: var(--indigo-500);
@@ -54,6 +53,16 @@ button.add-education {
   cursor: pointer;
   width: clamp(75px, 10vw, 100px);
   justify-self: center;
+}
+
+.add-education:hover {
+  background-color: var(--indigo-600);
+}
+
+.add-education:active {
+  background-color: var(--indigo-700);
+  transform: scale(0.95);
+  transition: all 0.15s ease-in-out;
 }
 
 .education-and-action-line button {

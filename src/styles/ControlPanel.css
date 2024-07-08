@@ -13,13 +13,24 @@
   align-items: center;
   background-color: var(--indigo-500);
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   text-wrap: nowrap;
   border-radius: 8px;
   border: solid 2px var(--indigo-700);
-  padding: 0.25rem 0.5rem;
+  padding: clamp(0.475rem, 0.25vw + 0.25rem, 0.55rem)
+    clamp(0.875rem, 1.25vw + 0.25rem, 1.25rem);
   cursor: pointer;
-  width: clamp(150px, 30vw, 150px);
+  font-size: clamp(0.875rem, 1.25vw + 0.25rem, 1.1rem);
+}
+
+.control-panel-wrapper button:hover {
+  background-color: var(--indigo-600);
+}
+
+.control-panel-wrapper button:active {
+  background-color: var(--indigo-700);
+  transform: scale(0.95);
+  transition: all 0.15s ease-in-out;
 }
 
 @media (max-width: 600px) {

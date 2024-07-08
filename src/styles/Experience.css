@@ -45,8 +45,7 @@
   margin-bottom: 0.25rem;
 }
 
-button.add-experience {
-  width: 30%;
+.add-experience {
   display: flex;
   justify-content: center;
   background-color: var(--indigo-500);
@@ -56,6 +55,16 @@ button.add-experience {
   cursor: pointer;
   width: clamp(75px, 10vw, 100px);
   justify-self: center;
+}
+
+.add-experience:hover {
+  background-color: var(--indigo-600);
+}
+
+.add-experience:active {
+  background-color: var(--indigo-700);
+  transform: scale(0.95);
+  transition: all 0.15s ease-in-out;
 }
 
 .job-and-action-line button {
