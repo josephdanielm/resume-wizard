@@ -17,7 +17,7 @@
 .education {
   margin: 0;
   border: solid 1px var(--zinc-400);
-  background-color: var(--zinc-50);
+  background-color: white;
   border-radius: 8px;
 }
 
