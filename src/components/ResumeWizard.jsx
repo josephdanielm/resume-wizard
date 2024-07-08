@@ -18,7 +18,7 @@ const stepsLength = steps.length;
 
 export default function ResumeWizard() {
   const [currentStep, setCurrentStep] = useState(0);
-  const { resumeData, updateResumeData } = useResumeData();
+  const { resumeData, updateResumeData, replaceResumeData } = useResumeData();
 
   const Step = steps[currentStep];
   const currentStepClass = stepClasses[currentStep];
@@ -42,7 +42,11 @@ export default function ResumeWizard() {
             stepsLength={stepsLength}
             setCurrentStep={setCurrentStep}
           >
-            <Step resumeData={resumeData} updateResumeData={updateResumeData} />
+            <Step
+              resumeData={resumeData}
+              updateResumeData={updateResumeData}
+              replaceResumeData={replaceResumeData}
+            />
           </Navigation>
         </>
       )}
@@ -78,18 +82,19 @@ const useResumeData = () => {
   const [resumeData, setResumeData] = useState(resumeDataObject);
 
   const updateResumeData = (name, value) => {
-    if (typeof name === "object") {
-      setResumeData(name);
-    } else {
-      setResumeData((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-    }
+    setResumeData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const replaceResumeData = (newData) => {
+    setResumeData(newData);
   };
 
   return {
     resumeData,
     updateResumeData,
+    replaceResumeData,
   };
 };

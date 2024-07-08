@@ -7,8 +7,11 @@
   max-width: 1280px;
 }
 
-.knowledge-section {
+.additional-section {
   flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.5rem, 0.5vw + 0.5rem, 1.25rem);
 }
 
 .general .input-field-group {
@@ -28,11 +31,10 @@
   background-color: var(--indigo-100);
   border: solid 1px var(--zinc-300);
   color: var(--zinc-600);
-  padding: clamp(1rem, 2vw + 1rem, 3rem) clamp(1rem, 2vw + 0.5rem, 2rem);
+  padding: clamp(1rem, 2vw + 0.5rem, 2rem);
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  height: 100%;
   row-gap: clamp(0.5rem, 0.5vw + 0.5rem, 1.25rem);
 }
 
@@ -41,27 +43,41 @@
   width: 100%;
   font-weight: 500;
   margin-left: 0rem;
-  font-size: clamp(0.875rem, 1.25vw + 0.25rem, 1.25rem);
+  font-size: clamp(0.875rem, 1.25vw + 0.25rem, 1.1rem);
 }
 
 .tips-title {
   font-weight: 800;
-  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+  font-size: clamp(1rem, 1.25vw + 0.5rem, 1.4rem);
   line-height: 100%;
   color: var(--indigo-800);
 }
 
-.hint-animation {
-  animation: hint 1s infinite alternate;
+.use-example-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--indigo-500);
+  color: white;
+  font-weight: 600;
+  text-wrap: nowrap;
+  border-radius: 8px;
+  border: solid 2px var(--indigo-700);
+  padding: clamp(0.475rem, 0.25vw + 0.25rem, 0.55rem)
+    clamp(0.875rem, 1.25vw + 0.25rem, 1.25rem);
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: clamp(0.875rem, 1.25vw + 0.25rem, 1.1rem);
 }
 
-@keyframes hint {
-  from {
-    color: black;
-  }
-  to {
-    color: blueviolet;
-  }
+.use-example-data:hover {
+  background-color: var(--indigo-600);
+}
+
+.use-example-data:active {
+  background-color: var(--indigo-700);
+  transform: scale(0.95);
+  transition: all 0.15s ease-in-out;
 }
 
 @media (max-width: 777px) {

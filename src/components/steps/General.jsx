@@ -1,25 +1,18 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
 import "../../styles/General.css";
 
-export default function General({ resumeData, updateResumeData }) {
+export default function General({
+  resumeData,
+  updateResumeData,
+  replaceResumeData,
+}) {
   function handleChange(event) {
     const { name, value } = event.target;
     updateResumeData(name, value);
   }
 
-  const [showHint, setShowHint] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowHint((prev) => !prev);
-    }, 15000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  function fillWithEasterEggData() {
-    updateResumeData(easterEggData);
+  function fillWithExampleData() {
+    replaceResumeData(exampleData);
   }
 
   return (
@@ -60,29 +53,23 @@ export default function General({ resumeData, updateResumeData }) {
         </div>
       </div>
 
-      <div className="knowledge-section">
+      <div className="additional-section">
         <ul className="tips">
-          <span
-            className={`tips-title ${showHint ? "hint-animation" : ""}`}
-            onClick={() => fillWithEasterEggData()}
-          >
-            Tips
-          </span>
-          <li className="tip">
-            Accurate contact information helps potential employers reach you
-            easily.
-          </li>
+          <span className="tips-title">Tips</span>
           <li className="tip">Use an email address that includes your name.</li>
           <li className="tip">
             Avoid using nicknames or unprofessional usernames.
           </li>
         </ul>
+        <button className="use-example-data" onClick={fillWithExampleData}>
+          Use Example Data
+        </button>
       </div>
     </div>
   );
 }
 
-const easterEggData = {
+const exampleData = {
   name: "Raccacoonie",
   email: "raccacoonie@example.com",
   phoneNumber: "123-456-7890",
