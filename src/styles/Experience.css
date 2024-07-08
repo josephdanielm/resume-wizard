@@ -43,6 +43,7 @@
   font-weight: 600;
   color: var(--indigo-800);
   margin-bottom: 0.25rem;
+  align-items: center;
 }
 
 .add-job {
@@ -79,6 +80,10 @@
   width: 100%;
 }
 
+.remove-svg {
+  width: 24px;
+}
+
 .job button {
   align-self: center;
   background: none;
@@ -87,11 +92,15 @@
   position: relative;
   cursor: pointer;
   padding: 0;
+  transition: transform 0.1s linear;
 }
 
-.remove-svg {
-  transition: transform 400ms ease-in-out;
-  width: 24px;
+.job button:hover {
+  transform: scale(0.9);
+}
+
+.job button:active {
+  transform: scale(0.8);
 }
 
 label.main-responsibilities {

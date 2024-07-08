@@ -33,7 +33,7 @@ export default function Experience({ resumeData, updateResumeData }) {
       {resumeData.experience.map((job, index) => (
         <div key={index} className="job">
           <span className="job-and-action-line">
-            {job.companyName}
+            Job {index + 1}
             <button onClick={() => removeJob(index)}>
               <img className="remove-svg" src={remove} />
             </button>

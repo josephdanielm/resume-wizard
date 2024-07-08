@@ -31,7 +31,7 @@ export default function Education({ resumeData, updateResumeData }) {
       {resumeData.education.map((educationEntry, index) => (
         <div key={index} className="education-entry">
           <span className="education-and-action-line">
-            {educationEntry.schoolName}
+            Education {index + 1}
             <button onClick={() => removeEducation(index)}>
               <img className="remove-svg" src={remove} />
             </button>

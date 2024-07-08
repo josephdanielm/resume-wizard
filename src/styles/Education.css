@@ -41,6 +41,7 @@
   font-weight: 600;
   color: var(--indigo-800);
   margin-bottom: 0.25rem;
+  align-items: center;
 }
 
 .add-education {
@@ -85,11 +86,15 @@
   position: relative;
   cursor: pointer;
   padding: 0;
+  transition: transform 0.1s linear;
 }
 
-.remove-svg {
-  transition: transform 400ms ease-in-out;
-  width: 24px;
+.education-entry button:hover {
+  transform: scale(0.9);
+}
+
+.education-entry button:active {
+  transform: scale(0.8);
 }
 
 @media (max-width: 500px) {
