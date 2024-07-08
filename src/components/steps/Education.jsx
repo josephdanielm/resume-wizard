@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../../styles/Education.css";
 import remove from "../../assets/remove.svg";
 
@@ -22,8 +23,17 @@ export default function Education({ resumeData, updateResumeData }) {
   }
 
   function removeEducation(index) {
-    const updatedEducation = resumeData.education.filter((_, i) => i !== index);
-    updateResumeData("education", updatedEducation);
+    const schoolName = resumeData.education[index].schoolName;
+    const message = schoolName
+      ? `Confirm deletion of "${schoolName}"`
+      : "Confirm deletion of item";
+
+    if (window.confirm(message)) {
+      const updatedEducation = resumeData.education.filter(
+        (_, i) => i !== index
+      );
+      updateResumeData("education", updatedEducation);
+    }
   }
 
   return (

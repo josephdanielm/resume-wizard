@@ -70,33 +70,56 @@ export default function General({
 }
 
 const exampleData = {
-  name: "Raccacoonie",
-  email: "raccacoonie@example.com",
+  name: "Albus Dumbledore",
+  email: "albus.dumbledore@example.com",
   phoneNumber: "123-456-7890",
   experience: [
     {
-      companyName: "Le Gourmet Restaurant",
-      positionTitle: "Head Chef",
+      companyName: "Hogwarts School of Witchcraft and Wizardry",
+      positionTitle: "Headmaster",
       mainResponsibilities:
-        "Leading the kitchen team, creating new recipes, ensuring high-quality food preparation",
-      dateFrom: "2015",
-      dateUntil: "2019",
+        "Overseeing school operations, mentoring students and staff, defending the school against dark forces",
+      dateFrom: "1956",
+      dateUntil: "1997",
     },
     {
-      companyName: "Animal Kingdom Culinary School",
-      positionTitle: "Cooking Instructor",
+      companyName: "International Confederation of Wizards",
+      positionTitle: "Supreme Mugwump",
       mainResponsibilities:
-        "Teaching culinary skills to students, developing curriculum, mentoring aspiring chefs",
-      dateFrom: "2020",
-      dateUntil: "Present",
+        "Leading the international wizarding community, promoting magical cooperation and peace",
+      dateFrom: "1948",
+      dateUntil: "1995",
+    },
+    {
+      companyName: "Wizengamot",
+      positionTitle: "Chief Warlock",
+      mainResponsibilities:
+        "Presiding over the wizarding court, ensuring justice in the magical community",
+      dateFrom: "1935",
+      dateUntil: "1995",
     },
   ],
   education: [
     {
-      schoolName: "Culinary Institute of Animalia",
-      titleOfStudy: "Master of Culinary Arts",
-      dateFrom: "2010",
-      dateUntil: "2014",
+      schoolName: "Hogwarts School of Witchcraft and Wizardry",
+      titleOfStudy:
+        "N.E.W.T.s in Transfiguration, Charms, Potions, and Defense Against the Dark Arts",
+      dateFrom: "1892",
+      dateUntil: "1899",
     },
+  ],
+  skills: [
+    "Expert in Transfiguration",
+    "Master Duelist",
+    "Alchemical Prodigy",
+    "Fluent in Parseltongue",
+    "Proficient in Legilimency and Occlumency",
+    "Exceptional Leadership and Mentorship",
+  ],
+  achievements: [
+    "Defeated the Dark Wizard Grindelwald",
+    "Discoverer of the twelve uses of dragon's blood",
+    "Order of Merlin, First Class",
+    "Founder of the Order of the Phoenix",
   ],
 };

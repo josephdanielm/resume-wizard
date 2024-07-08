@@ -24,8 +24,15 @@ export default function Experience({ resumeData, updateResumeData }) {
   }
 
   function removeJob(index) {
-    const updatedJob = resumeData.experience.filter((_, i) => i !== index);
-    updateResumeData("experience", updatedJob);
+    const companyName = resumeData.experience[index].companyName;
+    const message = companyName
+      ? `Confirm deletion of "${companyName}"`
+      : "Confirm deletion of item";
+
+    if (window.confirm(message)) {
+      const updatedJob = resumeData.experience.filter((_, i) => i !== index);
+      updateResumeData("experience", updatedJob);
+    }
   }
 
   return (
