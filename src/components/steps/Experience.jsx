@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import "../../styles/Experience.css";
 import remove from "../../assets/remove.svg";
-import add from "../../assets/add.svg";
 
 export default function Experience({ resumeData, updateResumeData }) {
   function handleChange(event, index) {
@@ -12,7 +11,7 @@ export default function Experience({ resumeData, updateResumeData }) {
     updateResumeData("experience", updatedExperience);
   }
 
-  function addExperience() {
+  function addJob() {
     const newJob = {
       companyName: "",
       positionTitle: "",
@@ -20,15 +19,13 @@ export default function Experience({ resumeData, updateResumeData }) {
       dateFrom: "",
       dateUntil: "",
     };
-    const updatedExperience = [...resumeData.experience, newJob];
-    updateResumeData("experience", updatedExperience);
+    const updatedJob = [...resumeData.experience, newJob];
+    updateResumeData("experience", updatedJob);
   }
 
-  function removeExperience(index) {
-    const updatedExperience = resumeData.experience.filter(
-      (_, i) => i !== index
-    );
-    updateResumeData("experience", updatedExperience);
+  function removeJob(index) {
+    const updatedJob = resumeData.experience.filter((_, i) => i !== index);
+    updateResumeData("experience", updatedJob);
   }
 
   return (
@@ -37,7 +34,7 @@ export default function Experience({ resumeData, updateResumeData }) {
         <div key={index} className="job">
           <span className="job-and-action-line">
             {job.companyName}
-            <button onClick={() => removeExperience(index)}>
+            <button onClick={() => removeJob(index)}>
               <img className="remove-svg" src={remove} />
             </button>
           </span>
@@ -100,8 +97,8 @@ export default function Experience({ resumeData, updateResumeData }) {
           </div>
         </div>
       ))}
-      <button className="add-experience" onClick={addExperience}>
-        <img className="add-svg" src={add} />
+      <button className="add-job" onClick={addJob}>
+        Add Job
       </button>
     </div>
   );

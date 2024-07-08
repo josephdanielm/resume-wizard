@@ -1,6 +1,5 @@
 import "../../styles/Education.css";
 import remove from "../../assets/remove.svg";
-import add from "../../assets/add.svg";
 
 export default function Education({ resumeData, updateResumeData }) {
   function handleChange(event, index) {
@@ -84,7 +83,7 @@ export default function Education({ resumeData, updateResumeData }) {
         </div>
       ))}
       <button className="add-education" onClick={addEducation}>
-        <img className="add-svg" src={add} />
+        Add Education
       </button>
     </div>
   );

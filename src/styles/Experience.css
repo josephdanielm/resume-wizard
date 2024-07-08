@@ -45,23 +45,27 @@
   margin-bottom: 0.25rem;
 }
 
-.add-experience {
+.add-job {
   display: flex;
   justify-content: center;
   background-color: var(--indigo-500);
   border-radius: 8px;
   border: solid 2px var(--indigo-700);
-  padding: 6px;
+  padding: clamp(0.475rem, 0.25vw + 0.25rem, 0.55rem)
+    clamp(0.875rem, 1.25vw + 0.25rem, 1.25rem);
   cursor: pointer;
-  width: clamp(75px, 10vw, 100px);
   justify-self: center;
+  color: white;
+  font-size: clamp(0.875rem, 1.25vw + 0.25rem, 1.1rem);
+  font-weight: 600;
+  text-wrap: nowrap;
 }
 
-.add-experience:hover {
+.add-job:hover {
   background-color: var(--indigo-600);
 }
 
-.add-experience:active {
+.add-job:active {
   background-color: var(--indigo-700);
   transform: scale(0.95);
   transition: all 0.15s ease-in-out;
