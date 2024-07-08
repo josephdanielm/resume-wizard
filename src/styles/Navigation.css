@@ -4,7 +4,6 @@
   border: solid 2px var(--indigo-700);
   padding: 6px;
   cursor: pointer;
-  height: clamp(75px, 10vh, 100px);
   align-self: center;
 }
 
@@ -43,4 +42,11 @@
 
 .left-button:active .arrow-svg {
   transform: translateX(-5px);
+}
+
+@media (max-width: 777px) {
+  .nav-button {
+    width: 42px;
+    height: 42px;
+  }
 }

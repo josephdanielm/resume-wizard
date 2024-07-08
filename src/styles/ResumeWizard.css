@@ -70,6 +70,19 @@ label {
 }
 
 @media (max-width: 777px) {
+  .general-wrapper,
+  .experience-wrapper,
+  .education-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .general,
+  .experience,
+  .education {
+    order: -1;
+  }
+
   .input-field-group:focus-within label {
     font-size: 0.8rem;
     transform: translateY(-1.5rem);
