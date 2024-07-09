@@ -24,7 +24,6 @@
   gap: 1rem;
   padding: 1.5rem 1rem;
   border-radius: 8px;
-  border: solid 2px var(--indigo-400);
 }
 
 .job span {
