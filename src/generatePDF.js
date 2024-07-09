@@ -67,5 +67,5 @@ export default function generatePDF(data) {
     yPosition += 10;
   });
 
-  return doc.output('bloburi');
+  return doc;
 };
